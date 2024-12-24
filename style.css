@@ -1,0 +1,154 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: #4fb64c;
+    overflow-x: hidden;
+    margin: 0%;
+    background-size: contain;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    min-height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.block {
+    flex: 1;
+    max-width: 30%;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.mainText {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 33%;
+    justify-content: center;
+}
+
+.mainText h1 {
+    text-align: center;
+    font-size: 50px;
+}
+
+.mainText p {
+    font-size: 40px;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+
+}
+
+canvas {
+    border: 3px solid #bfe0b9;
+}
+
+
+.gameContainer {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px 0;
+}
+
+.aside h1 {
+    text-align: center;
+}
+
+.aside img {
+    width: 300px;
+    border-radius: 30px;
+}
+
+#controls {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.control-button {
+    width: 60px;
+    height: 60px;
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 30px;
+    padding: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#left {
+    transform: rotate(-90deg);
+}
+
+#right {
+    transform: rotate(-270deg);
+}
+
+#down {
+    transform: rotate(-180deg);
+}
+
+@media (min-width: 768px) {
+    #controls {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .block {
+        max-width: 100%;
+    }
+
+    .aside {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #gameCanvas {
+        width: 100%;
+    }
+}
